@@ -1,0 +1,29 @@
+<script type="text/javascript">
+    RED.nodes.registerType('geobuf',{
+        category: 'function',
+        color: '#DEBD5C',
+        defaults: {
+            name: {value:""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: 'arrow-in.png',
+        label: function() {
+            return this.name||'geobuf';
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="geobuf">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="geobuf">
+    <p>A node to convert <code>GeoJSON</code> <code>msg.payload</code> to and from <a href="https://github.com/mapbox/geobuf"><i>Geobuf</i></a>.</p>
+
+    <p>If the input is NOT a buffer it tries to convert it to a geobuf buffer.</p>
+    <p>If the input is a geobuf buffer it tries to decode it back.</p>
+</script>

@@ -1,0 +1,24 @@
+{
+  "name": "node-red-contrib-geobuf",
+  "version": "1.0.0",
+  "description": "A Node-RED node to pack and unpack GeoJSON to Geobuf format",
+  "author": "Antoine Pultier",
+  "license": "Apache-2.0",
+  "keywords": [
+    "node-red",
+    "geobuf"
+  ],
+  "node-red": {
+    "nodes": {
+      "geobuf": "70-geobuf.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SINTEF-9012/node-red-contrib-geobuf.git"
+  },
+  "dependencies": {
+    "geobuf": "^3.0.0",
+    "pbf": "^3.1.0"
+  }
+}
